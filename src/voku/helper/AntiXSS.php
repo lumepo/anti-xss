@@ -653,8 +653,8 @@ final class AntiXSS
     private function _do($str)
     {
         $str = (string) $str;
-        $strInt = intval($str);
-        $strFloat = floatval($str);
+        $strInt = @intval($str);
+        $strFloat = @floatval($str);
         if (
             !$str
             ||
